@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<!--пост-->
+	<h2>{{ post.title }}</h2>
+	<h6>{{ post.author }}, {{ post.date.strftime('%d.%m.%Y') }}</h6>
+	<div class="row my-3 justify-content-center">
+		<div class="col-8">
+			<img src="{{ url_for('static', filename='images/' ~ post.image_filename) }}" alt="" class="img-fluid">
+		</div>
+	</div>
+	<p class="my-5">{{ post.text }}</p>
+
+	<!-- оставить комментарий -->
+	<div class="card">
+		<div class="card-header">
+		  Оставьте комментарий
+		</div>
+		<div class="card-body">
+		  <p class="card-text">
+			  <textarea class="form-control"></textarea>
+		  </p>
+		  <a href="#" class="btn btn-primary">Отправить</a>
+		</div>
+	</div>
+
+	<!--комментарии-->
+	{% for comment in comments %}
+	<div class="media my-5">
+		<img class="mr-3 comment-avatar" src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="">
+		<div class="media-body">
+		  <h5 class="mt-0">{{ comment.author }}</h5>
+		  <span class="text-muted">{{ comment.text }}</span>
+		  {% for replie in comment.replies %}
+		  <div class="media mt-3">
+			<a class="pr-3" href="#">
+			  <img class="comment-avatar" src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="">
+			</a>
+			<div class="media-body">
+			  <h5 class="mt-0">{{ replie.author }}</h5>
+			  <span class="text-muted">{{ replie.text }}</span>
+			</div>
+		  </div>
+		  {% endfor %}
+		</div>
+	</div>
+	{% endfor %}
+
+
+{% endblock %}

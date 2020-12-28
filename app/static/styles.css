@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+}
+
+.avatar {
+    max-width: 100%;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 48px;
+    border-radius: 25px;
+}
+
+.footer {
+    margin-top: auto;
+}
