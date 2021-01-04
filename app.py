@@ -76,15 +76,15 @@ def generate_post(i):
         'image_filename': f'{images_ids[i]}.jpg',
         'comments': generate_comments()
     }
-def create_post(i):
-    return {
-        'title': read_post_title(i),
-        'text': read_post(i),
-        'author': 'Александр Ковязин',
-        'date': get_date(1),
-        'image_filename': get_img(i),
-        'comments': generate_comments()
-    }
+# def create_post(i):
+#     return {
+#         'title': read_post_title(i),
+#         'text': read_post(i),
+#         'author': 'Александр Ковязин',
+#         'date': get_date(1),
+#         'image_filename': get_img(i),
+#         'comments': generate_comments()
+#     }
 
 # print(type(create_post(1)))
 f_posts = [generate_post(i) for i in range(5)]
