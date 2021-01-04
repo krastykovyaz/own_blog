@@ -48,7 +48,6 @@ def get_date(i):
 def get_img(i):
     directory = './app/static/images/'
     for filename in os.listdir(directory):
-        print(os.listdir)
         if filename.endswith(str(i)+'.jpg'):
             pic = filename
     return pic
@@ -90,7 +89,7 @@ def create_post(i):
 # print(type(create_post(1)))
 f_posts = [generate_post(i) for i in range(5)]
 # print(create_post(1))
-f_posts.append(create_post(1))
+# f_posts.append(create_post(1))
 # print(type(full))
 # posts_list = sorted([generate_post(i) for i in range(5)], key=lambda p: p['date'], reverse=True)
 posts_list = sorted(f_posts, key=lambda p: p['date'], reverse=True)
