@@ -24,49 +24,6 @@ def generate_comments(replies=True):
         comments.append(comment)
     return comments
 
-# def read_post_title(i):
-#     directory = './app/static/text/'
-#     for filename in os.listdir(directory):
-#         if filename.endswith(str(i)+'.txt'):
-#             handle = open(directory + filename)
-#             for line in handle:
-#                 title = line.strip('\n')
-#                 break                
-#     return title
-
-# def get_date(i):
-#     directory = './app/static/images/'
-#     for filename in os.listdir(directory):
-#         if filename.endswith(str(i)+'.jpg'):
-#             t = os.path.getmtime(directory + filename)
-#             date = str(datetime.datetime.fromtimestamp(t))
-#             date = date.split(' ')
-#             date = date[0].split('-')
-#             date_post = str(date[2]) + '.' + str(date[1]) + '.' + str(date[0])
-#     return datetime.datetime.fromtimestamp(t)
-
-# def get_img(i):
-#     directory = './app/static/images/'
-#     for filename in os.listdir(directory):
-#         if filename.endswith(str(i)+'.jpg'):
-#             pic = filename
-#     return pic
-
-
-# def read_post(i):
-#     directory = './app/static/text/'
-#     for filename in os.listdir(directory):
-#         if filename.endswith(str(i)+'.txt'):
-#             handle = open(directory + filename)
-#             post = ''
-#             i = 0
-#             for line in handle:
-#                 if i > 0:
-#                     post += line.strip('\n')
-#                     post += '\n'
-#                 i += 1
-#     return post
-
 def generate_post(i):
     return {
         'title': fake.sentence(nb_words=randint(5, 10)),
@@ -76,15 +33,6 @@ def generate_post(i):
         'image_filename': f'{images_ids[i]}.jpg',
         'comments': generate_comments()
     }
-# def create_post(i):
-#     return {
-#         'title': read_post_title(i),
-#         'text': read_post(i),
-#         'author': 'Александр Ковязин',
-#         'date': get_date(1),
-#         'image_filename': get_img(i),
-#         'comments': generate_comments()
-#     }
 
 # print(type(create_post(1)))
 f_posts = [generate_post(i) for i in range(5)]
