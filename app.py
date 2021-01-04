@@ -24,48 +24,48 @@ def generate_comments(replies=True):
         comments.append(comment)
     return comments
 
-def read_post_title(i):
-    directory = './app/static/text/'
-    for filename in os.listdir(directory):
-        if filename.endswith(str(i)+'.txt'):
-            handle = open(directory + filename)
-            for line in handle:
-                title = line.strip('\n')
-                break                
-    return title
+# def read_post_title(i):
+#     directory = './app/static/text/'
+#     for filename in os.listdir(directory):
+#         if filename.endswith(str(i)+'.txt'):
+#             handle = open(directory + filename)
+#             for line in handle:
+#                 title = line.strip('\n')
+#                 break                
+#     return title
 
-def get_date(i):
-    directory = './app/static/images/'
-    for filename in os.listdir(directory):
-        if filename.endswith(str(i)+'.jpg'):
-            t = os.path.getmtime(directory + filename)
-            date = str(datetime.datetime.fromtimestamp(t))
-            date = date.split(' ')
-            date = date[0].split('-')
-            date_post = str(date[2]) + '.' + str(date[1]) + '.' + str(date[0])
-    return datetime.datetime.fromtimestamp(t)
+# def get_date(i):
+#     directory = './app/static/images/'
+#     for filename in os.listdir(directory):
+#         if filename.endswith(str(i)+'.jpg'):
+#             t = os.path.getmtime(directory + filename)
+#             date = str(datetime.datetime.fromtimestamp(t))
+#             date = date.split(' ')
+#             date = date[0].split('-')
+#             date_post = str(date[2]) + '.' + str(date[1]) + '.' + str(date[0])
+#     return datetime.datetime.fromtimestamp(t)
 
-def get_img(i):
-    directory = './app/static/images/'
-    for filename in os.listdir(directory):
-        if filename.endswith(str(i)+'.jpg'):
-            pic = filename
-    return pic
+# def get_img(i):
+#     directory = './app/static/images/'
+#     for filename in os.listdir(directory):
+#         if filename.endswith(str(i)+'.jpg'):
+#             pic = filename
+#     return pic
 
 
-def read_post(i):
-    directory = './app/static/text/'
-    for filename in os.listdir(directory):
-        if filename.endswith(str(i)+'.txt'):
-            handle = open(directory + filename)
-            post = ''
-            i = 0
-            for line in handle:
-                if i > 0:
-                    post += line.strip('\n')
-                    post += '\n'
-                i += 1
-    return post
+# def read_post(i):
+#     directory = './app/static/text/'
+#     for filename in os.listdir(directory):
+#         if filename.endswith(str(i)+'.txt'):
+#             handle = open(directory + filename)
+#             post = ''
+#             i = 0
+#             for line in handle:
+#                 if i > 0:
+#                     post += line.strip('\n')
+#                     post += '\n'
+#                 i += 1
+#     return post
 
 def generate_post(i):
     return {
