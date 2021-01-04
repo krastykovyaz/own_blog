@@ -4,17 +4,58 @@
     <h1 class="text-center">Об авторе</h1>
     <div class="row">
         <div class="col-md-4">
-            <img class="avatar" src="{{ url_for('static', filename='images/photo_2020-12-16_11-39-48.jpg') }}" alt="">
+            <div class="well">
+                <div class="text-center">
+                <img class="avatar" src="{{ url_for('static', filename='images/photo_2020-12-16_11-39-48.png') }}" style="width:80%">
+                <p>15.03.1990</p>
+                    <div class='social'>
+                    <p><span class="glyphicon glyphicon-envelope"></span> alexkovyaz@gmail.com</p>
+                    <p><span class="glyphicon glyphicon-earphone"></span> +7-981-870-03-94</p>
+                    <div class="btn-group">
+                        <a class="fab fa-github btn btn-dark btn-sm" href="https://github.com/krastykovyaz" role="button"> Github</a>
+                        <a class="fab fa-telegram btn btn-dark btn-sm" href="https://t.me/krasty_kovyaz" role="button"> Telegram</a>
+                        <a class="fab fa-linkedin btn btn-dark btn-sm" href="https://linkedin.com/in/aleksandr-kovyazin-612579178" role="button"> Linkedin</a>
+                      </div>
+                </div>
+            </div>
         </div>
+    </div>
         <div class="col-md-8 text-justify d-flex align-items-center">
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil cum enim reiciendis vero, 
-                magni pariatur vel nisi rerum cupiditate maxime expedita fugiat tenetur esse illo recusandae 
-                laborum ut rem ea.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil cum enim reiciendis vero, 
-                magni pariatur vel nisi rerum cupiditate maxime expedita fugiat tenetur esse illo recusandae 
-                laborum ut rem ea.
-            </p>
+            <div class="container">
+                <h3>Образование:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                    <b>Школа 21, Москва, Россия</b>
+                    <p>Программирование</p>
+                    <b>Пекинский Университет, Китай</b>
+                    <p>Корпоративные финансы и риск менеджмент</p>
+                    <b>Санкт-Петербургский Государственный Университет</b>
+                    <p>Прикладная макроэкономика и государственное регулирование</p>
+                    <b>Санкт-Петербургский Государственный Университет</b>
+                    <p>Химия</p>
+                    <b>Санкт-Петербургский техникум пищевой промышленности</b>
+                    <p>Технология спиртосодержащих напитков</p>
+                    </li>
+                 <h3>Опыт работы:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                    <p>Data Science developer</p>
+                    <p>Старший химик</p>
+                    <p>Оператор логистического терминала</p>
+                    <p>Химия</p>
+                    <p>Техник-технолог пивоваренного производства</p>
+                    </li>
+                </ul>
+                <h3>Волонтерство и другие активности:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                    <p>Волонтер Международного Экономического Форума</p>
+                    <p>Волонтер Международного форума по кибербезопасности</p>
+                    <p>Член студенчесого совета</p>
+                    <p>Хоккейный тренер</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 {% endblock %}

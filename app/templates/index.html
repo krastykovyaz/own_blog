@@ -2,33 +2,33 @@
 
 {% block content %}
     <h1 class="my-3">Личный блог Сашки Ковязина</h1>
-
-    <p>
-        <b>
-            Привет, я только начинаю работать с WEB дизайном, поэтому не суди строго👨🏻‍🎨
-        </b>
-    </p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well" >
+                <p>Коротко обо мне:</p>
+                
+                <ul class="my-3">
+                    <li>программист</li>
+                    <li>химик</li>
+                    <li>экономист</li>
+                    <li>хоккеист</li>
+                    <li>влогер</li>
+                    <li>хороший человек</li>
+                </ul>
+            </div>
+        </div>
     
-    <p>Коротко обо мне:</p>
-    
-    <ul class="my-3">
-        <li>программист</li>
-        <li>химик</li>
-        <li>экономист</li>
-        <li>хоккеист</li>
-        <li>влогер</li>
-        <li>хороший человек</li>
-    </ul>
     
     <p></p>
-    
+    <div class="col-md-8 text-justify d-flex align-items-center">
     <p>
         <!-- Для отображения комментариев рекомендуется использовать компонент
         <a href="https://getbootstrap.com/docs/4.0/layout/media-object/" target="_blank">Media object</a>
         из библиотеки Bootstrap. -->
-        <img src="../static/images/bd1f46_f025146a5e614dde8e31c8c92dbe89d5~mv2.jpg" width='550' height='500' class="img-rounded" alt="Words_about_me">
+        <img src="../static/images/bd1f46_f025146a5e614dde8e31c8c92dbe89d5~mv2.jpg" style="width:70%" class="img-rounded" alt="Words_about_me">
     </p>
-    
+</div>
+</div>
     <!-- <p>Пример возможного оформления страницы:</p>
     
     <img class="img-fluid my-3 border" src="{{ url_for('static', filename='images/post-example-page.png') }}"

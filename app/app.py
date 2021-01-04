@@ -118,5 +118,9 @@ def about():
     title = 'Об авторе'
     return render_template('about.html', title=title)
 
+@app.context_processor
+def inject_now():
+    return {'now': datetime.datetime.utcnow()}
+
 if __name__ == "__main__":
     app.run()
